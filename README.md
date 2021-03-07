@@ -1,1 +1,1 @@
-# Calendar-Application
+# Weekly-Schedule-Application
