@@ -6,28 +6,30 @@ function changeColor() {
     $('.timeHolder').each(function(index,item){ 
         console.log("item = " + item);
         var currentHour = moment().format('HH');
-        var currentInt = parseInt(currentHour)-12; 
+        var currentInt = parseInt(currentHour); 
         var blockValue = parseInt($(item).data('index'));
         console.log("current = " + currentInt + ",block = " + blockValue);
+
+
         if(blockValue === currentInt){
             console.log("if");
-            $(item).addClass('present');
+            $(item).addClass("present");
         } else if (blockValue < currentInt) {
             console.log("else if");
-          $(item).addClass('past');
+          $(item).addClass("past");
+          console.log("item = " + $(item));
         } else {
             console.log("else");
-          $(item).addClass('future');
+          $(item).addClass("future");
         }
     });
 };
-
 
 changeColor();
 
 var runagain = window.setInterval(function(){
     changeColor();
-}, 1000);
+}, 10000);
 
 $(document).ready(function(){
     $('.row').each(function(){    

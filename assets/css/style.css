@@ -101,15 +101,3 @@ body {
     box-shadow: 0 5px #666;
     transform: translateX(3px);
   }
-
-  .present {
-    background-color: white;
-  }
-  
-  .past {
-    background-color: red;
-  }
-  
-  .future {
-    background-color: green;
-  }
