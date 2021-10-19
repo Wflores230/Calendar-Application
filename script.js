@@ -13,23 +13,21 @@ function changeColor() {
 
         if(blockValue === currentInt){
             console.log("if");
-            $(item).addClass("present");
+            $('.timeHolder').addClass("present");
         } else if (blockValue < currentInt) {
             console.log("else if");
-          $(item).addClass("past");
+          $('.timeHolder').addClass("past");
           console.log("item = " + $(item));
         } else {
             console.log("else");
-          $(item).addClass("future");
+          $('.timeHolder').addClass("future");
         }
     });
 };
 
 changeColor();
 
-var runagain = window.setInterval(function(){
-    changeColor();
-}, 10000);
+var runagain = setInterval(changeColor, 10000);
 
 $(document).ready(function(){
     $('.row').each(function(){    
